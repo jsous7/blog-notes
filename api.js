@@ -1,4 +1,4 @@
-const URL = "http://blog.zenycosta.com/api";
+const URL = "http://back.zenycosta.com/api";
 
 function deanonymizeApiRequest(body, arrayOfNamesIds) {
     let item = "";
@@ -8,7 +8,7 @@ function deanonymizeApiRequest(body, arrayOfNamesIds) {
     var xmlEnvelop =`
     <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
         <Body>
-            <deannonymizer xmlns="http://blog.zenycosta.com/">
+            <deannonymizer xmlns="http://back.zenycosta.com">
                 <text xmlns="">${body}</text>
                 <ids xmlns="">
                     ${item}
@@ -38,7 +38,7 @@ function findAll() {
     var xmlEnvelop =`
     <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
         <Body>
-            <findAll xmlns="http://blog.zenycosta.com/"></findAll>
+            <findAll xmlns="http://back.zenycosta.com"></findAll>
         </Body>
     </Envelope>`;
     
@@ -63,7 +63,7 @@ function create(title, author, body) {
     var xmlEnvelop =`
     <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
         <Body>
-            <create xmlns="http://blog.zenycosta.com/">
+            <create xmlns="http://back.zenycosta.com/">
                 <title xmlns="">${title}</title>
                 <author xmlns="">${author}</author>
                 <body xmlns="">${body}</body>
@@ -91,7 +91,7 @@ function deleteElement(id) {
     var xmlEnvelop =`
     <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
         <Body>
-            <delete xmlns="http://blog.zenycosta.com/">
+            <delete xmlns="http://back.zenycosta.com/">
                 <id xmlns="">${id}</id>
             </delete>
         </Body>
