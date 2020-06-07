@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog notes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+        }
+    </script>
+</head>
+<body>
+    <header id="header" class="header">
+        <h1 class="logo">Blog where you add your notes</h1>
+    </header>
+
+    <section id="create-post-container" class="create-post-container">
+        <form id="form" class="post">
+            <h2 class="post-title-header">Create</h2>
+            <table class="post-title-content">
+                <tr>
+                    <td>
+                        <label for="title">Title:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="title" class="title" min="5" max="200" size="60" name="title">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="author">Author:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="author" class="author" min="5" max="100" size="60" name="author">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="content">Content:</label>
+                    </td>
+                    <td>
+                        <textarea id="content" class="content" name="content"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <!-- <button type="submit" id="create-post" class="create-post">Create Post</button> -->
+                        <button type="submit" id="create-post" class="create-post" class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>Create Post</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+
+    <section id="post-container" class="post-container">
+        <h4 id="msg" class="msg">Type "exit" to deannonymize</h4>
+    </section>
+
+    <footer id="footer" class="footer">
+        <p>&copy; Copyright - Juliana Sousa - 2020</p>
+    </footer>
+</body>
+<script src="https://cdn.tiny.cloud/1/3qnni0jef7xxac7ndiuv0ao5p27jroxdefs46bxt7bmy9xf9/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://code.jquery.com/jquery-git.js"></script>
+<script src="api.js"></script>
+<script src="blog.js"></script>
+
+</html>
+
